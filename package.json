@@ -6,7 +6,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yourusername/drag-button.git"
+        "url": "git+https://github.com/markcastle/drag-button.git"
     },
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
