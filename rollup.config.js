@@ -33,12 +33,10 @@ module.exports = {
       extensions: ['.js', '.jsx']
     }),
     postcss({
+      extract: true,
       modules: false,
-      extract: false,
       minimize: true,
-      inject: {
-        insertAt: 'top'
-      }
+      inject: false
     }),
     terser()
   ],

@@ -1,20 +1,21 @@
-module.exports = {
-  stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
+/** @type { import('@storybook/react-vite').StorybookConfig } */
+const config = {
+  "stories": [
+    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
+    "../stories/**/*.mdx"
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-webpack5',
-  },
-  webpackFinal: async (config) => {
-    // Add CSS handling
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
-    });
-
-    return config;
-  },
-}; 
+  "addons": [
+    {
+      "name": "@storybook/addon-essentials",
+      "options": {
+        "docs": false
+      }
+    },
+    "@storybook/addon-interactions"
+  ],
+  "framework": {
+    "name": "@storybook/react-vite",
+    "options": {}
+  }
+};
+export default config;

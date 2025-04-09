@@ -1,18 +1,16 @@
 import React from 'react';
-import { DragButton } from '../src';
+import { fn } from '@storybook/test';
+import DragButton from '../src/components/DragButton';
 
 export default {
   title: 'Components/DragButton',
   component: DragButton,
-  parameters: {
-    layout: 'centered',
-  },
   argTypes: {
-    onDragStart: { action: 'dragStart' },
-    onDrag: { action: 'drag' },
-    onDragEnd: { action: 'dragEnd' },
-    disabled: { control: 'boolean' },
+    onDragStart: { control: false },
+    onDrag: { control: false },
+    onDragEnd: { control: false },
     className: { control: 'text' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -20,36 +18,39 @@ const Template = (args) => <DragButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Drag me',
+  children: 'Drag Me',
+  onDragStart: fn(),
+  onDrag: fn(),
+  onDragEnd: fn(),
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  children: 'Cannot drag me',
+  ...Default.args,
   disabled: true,
 };
 
 export const CustomStyle = Template.bind({});
 CustomStyle.args = {
-  children: 'Styled button',
+  ...Default.args,
   className: 'custom-button',
+  children: 'Custom Styled Button',
 };
 
 // Example with drag position tracking
 export const WithPositionTracking = () => {
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
-
+  
   return (
     <div>
       <DragButton
-        onDrag={(event, pos) => setPosition(pos)}
-        style={{ marginBottom: '20px' }}
+        onDrag={(e, { x, y }) => setPosition({ x, y })}
+        onDragStart={fn()}
+        onDragEnd={fn()}
       >
-        Drag me and watch the position
+        Drag to Track Position
       </DragButton>
-      <div>
-        Current position: X: {Math.round(position.x)}, Y: {Math.round(position.y)}
-      </div>
+      <p>Position: x={position.x}, y={position.y}</p>
     </div>
   );
 }; 
