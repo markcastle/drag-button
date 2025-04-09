@@ -1,0 +1,94 @@
+/* DragButton.css - Styles for the drag button component */
+
+.drag-button-container {
+    position: relative;
+    display: inline-block;
+    /* Prevent the container from being tapped/highlighted on mobile */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+  }
+  
+  .drag-background {
+    position: absolute;
+    border-radius: 40px;
+    opacity: 0.2;
+    display: none; /* Hidden by default, shown when active */
+  }
+  
+  .drag-button {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    touch-action: none;
+    position: absolute;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.2s;
+    z-index: 10;
+    /* Better touch targeting on mobile */
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .drag-button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  }
+  
+  .drag-button.dragging {
+    transition: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .drag-tooltip {
+    position: absolute;
+    padding: 5px 10px;
+    display: none; /* Hidden by default, shown when dragging */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    pointer-events: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    white-space: nowrap;
+  }
+  
+  .drag-tooltip.rounded {
+    border-radius: 20px;
+  }
+  
+  .drag-tooltip.circular {
+    border-radius: 50%;
+  }
+  
+  .drag-tooltip.left {
+    right: 100%;
+    margin-right: 10px;
+  }
+  
+  .drag-tooltip.right {
+    left: 100%;
+    margin-left: 10px;
+  }
+  
+  .drag-connector {
+    position: absolute;
+    pointer-events: none;
+    display: none; /* Hidden by default, shown when dragging */
+    z-index: 5;
+  }
+  
+  /* Show elements when dragging */
+  .drag-button-container.dragging .drag-background,
+  .drag-button-container.dragging .drag-tooltip,
+  .drag-button-container.dragging .drag-connector {
+    display: block;
+  }
+  
+  /* Tooltip will be flex when dragging */
+  .drag-button-container.dragging .drag-tooltip {
+    display: flex;
+  }

@@ -1,0 +1,41 @@
+.drag-button {
+  position: relative;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: transform 0.1s ease-out;
+}
+
+.drag-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.drag-button.dragging {
+  cursor: grabbing;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Accessibility focus styles */
+.drag-button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.drag-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Touch device styles */
+@media (hover: none) and (pointer: coarse) {
+  .drag-button {
+    cursor: pointer;
+  }
+  
+  .drag-button.dragging {
+    cursor: pointer;
+  }
+} 

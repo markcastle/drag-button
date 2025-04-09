@@ -1,0 +1,27 @@
+# Development
+/src
+/tests
+/stories
+/.storybook
+/example
+
+# Config files
+.babelrc
+.eslintrc
+jest.config.js
+rollup.config.js
+
+# Git
+.gitignore
+.git
+
+# Misc
+.DS_Store
+*.log
+.env*
+.editorconfig
+.eslintignore
+.prettierrc
+.prettierignore
+README.md
+LICENSE 
