@@ -1,11 +1,17 @@
 /* DragButton.css - Styles for the drag button component */
 
+/* Modern font stack */
+:root {
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 .drag-button-container {
     position: relative;
     display: inline-block;
     /* Prevent the container from being tapped/highlighted on mobile */
     -webkit-tap-highlight-color: transparent;
     touch-action: none;
+    font-family: var(--font-stack);
   }
   
   .drag-background {
@@ -26,7 +32,9 @@
     user-select: none;
     touch-action: none;
     position: absolute;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, background-color 0.2s;
     z-index: 10;
@@ -49,7 +57,9 @@
     display: none; /* Hidden by default, shown when dragging */
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
     pointer-events: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 20;

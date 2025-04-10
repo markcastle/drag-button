@@ -279,4 +279,5 @@ DragButton.propTypes = {
   style: PropTypes.object,
 };
 
+export { DragButton };
 export default DragButton;

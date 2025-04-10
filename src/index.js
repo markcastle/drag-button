@@ -1,3 +1,3 @@
-import { DragButton } from './components/DragButton.jsx';
+import { DragButton } from './components/common/DragButton/DragButton';
 
 export { DragButton }; 
