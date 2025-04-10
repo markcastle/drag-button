@@ -118,6 +118,18 @@ npm run storybook
 
 Then visit http://localhost:6006 in your browser.
 
+To stop the Storybook server:
+- Method 1: Press `Ctrl + C` in the terminal window where Storybook is running
+  - When prompted "Terminate batch job (Y/N)?", type `Y` and press Enter
+- Method 2: Using TaskKill (if the process is stuck or Method 1 doesn't work)
+  ```bash
+  # Find the process using port 6006
+  netstat -ano | findstr :6006
+  # Look for the PID in the LISTENING state (usually the first entry)
+  # Kill that process (replace XXXX with the PID)
+  taskkill /PID XXXX /F
+  ```
+
 ### Available Stories
 
 - **Default**: Basic DragButton implementation with standard functionality
