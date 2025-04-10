@@ -1,5 +1,14 @@
 # 🎯 DragButton
 
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://your-storybook-url)
+[![npm version](https://img.shields.io/npm/v/drag-button.svg)](https://www.npmjs.com/package/drag-button)
+[![npm downloads](https://img.shields.io/npm/dm/drag-button.svg)](https://www.npmjs.com/package/drag-button)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React Version](https://img.shields.io/badge/React-%3E%3D16.8.0-61DAFB?logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/drag-button)](https://bundlephobia.com/package/drag-button)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 A lightweight, accessible React component for creating draggable buttons with smooth animations and touch support.
 
 ## ✨ Features
