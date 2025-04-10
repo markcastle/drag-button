@@ -7,6 +7,7 @@
 - [x] Configure build system (Rollup)
 - [x] Set up testing environment (Jest + React Testing Library)
 - [x] Configure Storybook
+- [x] Set up Storybook with Vite and MDX support
 
 ## Component Development Tasks
 - [x] Create base DragButton component
@@ -47,6 +48,8 @@
 - [x] Fix defaultProps deprecation warning
 - [x] Update build configuration for proper JSX handling
 - [x] Fix module resolution issues
+- [x] Configure Storybook with Vite builder
+- [x] Fix Storybook MDX support
 
 ## Timeline
 - Project Start: April 9, 2024

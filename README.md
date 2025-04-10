@@ -106,6 +106,62 @@ function PositionTracker() {
 }
 ```
 
+## 📚 Storybook Documentation
+
+### Running Storybook
+
+To explore the component interactively and view all examples:
+
+```bash
+npm run storybook
+```
+
+Then visit http://localhost:6006 in your browser.
+
+### Available Stories
+
+- **Default**: Basic DragButton implementation with standard functionality
+- **Disabled**: Example of the button in a disabled state
+- **CustomStyle**: Demonstration of custom styling options
+- **WithPositionTracking**: Interactive example showing real-time position tracking
+
+### Development with Storybook
+
+#### Adding New Stories
+
+1. Create stories in `src/stories` directory
+2. Follow the naming convention: `ComponentName.stories.jsx`
+3. Use the template pattern for consistent story creation:
+
+```jsx
+import React from 'react';
+import { fn } from '@storybook/test';
+import DragButton from '../../src/components/DragButton';
+
+export default {
+  title: 'Components/DragButton',
+  component: DragButton,
+  argTypes: {
+    // Define your props here
+  },
+};
+
+const Template = (args) => <DragButton {...args} />;
+
+export const YourStory = Template.bind({});
+YourStory.args = {
+  // Define your story props here
+};
+```
+
+#### Best Practices
+
+- Document all props using `argTypes`
+- Include examples of common use cases
+- Add interactive examples for complex features
+- Use actions to demonstrate event handling
+- Include accessibility information in the docs
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
