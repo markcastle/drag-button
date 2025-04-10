@@ -1,6 +1,6 @@
 import React from 'react';
 import { fn } from '@storybook/test';
-import DragButton from '../src/components/DragButton';
+import DragButton from '../../src/components/DragButton';
 
 export default {
   title: 'Components/DragButton',

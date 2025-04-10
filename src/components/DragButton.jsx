@@ -78,4 +78,5 @@ DragButton.propTypes = {
   disabled: PropTypes.bool,
 };
 
-export { DragButton }; 
+export { DragButton };
+export default DragButton; 
